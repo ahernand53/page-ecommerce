@@ -13,6 +13,9 @@
 
     <link rel="stylesheet" href="Views/css/plugins/font-awesome.min.css">
     <link rel="stylesheet" href="Views/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="Views/css/cabezote.css">
+    <link rel="stylesheet" href="Views/css/plantilla.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet">
 </head>
 <body>
 

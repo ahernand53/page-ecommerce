@@ -1,0 +1,125 @@
+/*======================================================
+						GLOBAL
+======================================================*/
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: Ubuntu, Sans-Serif;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+a:visited, a:link, a:focus, a:hover, a:active {
+    list-style: none;
+    text-decoration: none;
+}
+
+.barraSuperior {
+    background: black;
+}
+
+.barraSuperior a {
+    color: white;
+}
+
+.backColor, .backColor a {
+    background: #47bac1;
+    color: white;
+}
+
+/*======================================================
+=                      REDES SOCIALES                  =
+======================================================*/
+
+.redSocial {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/*===== START SECTION FACEBOOK =====*/
+.facebookBlanco {
+    color: #fff;
+}
+
+.facebookNegro {
+    color: #000;
+}
+
+.facebookOriginal {
+    color: #fff;
+    background: #46639f;
+    border-radius: 50%;
+}
+/*===== END SECTION FACEBOOK =====*/
+
+/*===== START SECTION YOUTUBE =====*/
+.youtubeBlanco {
+    color: #fff;
+}
+
+.youtubeNegro {
+    color: #000;
+}
+
+.youtubeOriginal {
+    color: #fff;
+    background: #d6513e;
+    border-radius: 50%;
+}
+/*===== END SECTION YOUTUBE =====*/
+
+/*===== START SECTION INSTAGRAM =====*/
+.instagramBlanco {
+    color: #fff;
+}
+
+.instagramNegro {
+    color: #000;
+}
+
+.instagramOriginal {
+    color: #fff;
+    background: linear-gradient(45deg, #fca925, #ee1d5f, #6350a2);
+    border-radius: 50%;
+}
+/*===== END SECTION INSTAGRAM =====*/
+
+/*===== START SECTION GOOGLE PLUS =====*/
+.googleBlanco {
+    color: #fff;
+}
+
+.googleNegro {
+    color: #000;
+}
+
+.googleOriginal {
+    color: #fff;
+    background: #d71617;
+    border-radius: 50%;
+}
+/*===== END SECTION GOOGLE PLUS =====*/
+
+/*===== START SECTION TWITTER =====*/
+.twitterBlanco {
+    color: #fff;
+}
+
+.twitterNegro {
+    color: #000;
+}
+
+.twitterOriginal {
+    color: #fff;
+    background: #0ab2e6;
+    border-radius: 50%;
+}
+/*===== END SECTION TWITTER =====*/
+
