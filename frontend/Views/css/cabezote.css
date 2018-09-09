@@ -184,6 +184,7 @@ header #categorias hr {
 
 	header #categorias {
 		margin-bottom: 10px;
+		display: none;
 	}
 
 	header #buscador {

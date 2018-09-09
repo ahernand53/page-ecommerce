@@ -31,5 +31,7 @@
 
     <script src="Views/js/plugins/jquery.min.js"></script>
     <script src="Views/js/plugins/bootstrap.min.js"></script>
+    <script src="Views/js/cabezote.js"></script>
+    <script src="Views/js/plantilla.js"></script>
 </body>
 </html>
