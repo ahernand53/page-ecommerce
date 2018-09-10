@@ -9,38 +9,24 @@
         <div class="row">
 
             <!--==== START SECTION SOCIAL ====-->
+
+            <?php
+
+            $social = LayoutController::callStyle();
+
+            $redesJSON = json_decode($social['redes_sociales'], true);
+            ?>
+
             <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 social">
 
                 <ul>
+                    <?php foreach ($redesJSON as $redes): ?>
                     <li>
-                        <a href="http://facebook.com/" target="_blank">
-                            <i class="fa fa-facebook redSocial facebookOriginal" aria-hidden="true"></i>
+                        <a href="<?= $redes['url']; ?>" target="_blank">
+                            <i class="fa <?= $redes['red']; ?> redSocial <?= $redes['style'];?>" aria-hidden="true"></i>
                         </a>
                     </li>
-
-                    <li>
-                        <a href="http://youtube.com/" target="_blank">
-                            <i class="fa fa-youtube redSocial youtubeOriginal" aria-hidden="true"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="http://twitter.com/" target="_blank">
-                            <i class="fa fa-twitter redSocial twitterOriginal" aria-hidden="true"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="http://google.com/" target="_blank">
-                            <i class="fa fa-google-plus redSocial googleOriginal" aria-hidden="true"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="http://instagram.com/" target="_blank">
-                            <i class="fa fa-instagram redSocial instagramOriginal" aria-hidden="true"></i>
-                        </a>
-                    </li>
+                    <?php endforeach ?>
 
                 </ul>
 
