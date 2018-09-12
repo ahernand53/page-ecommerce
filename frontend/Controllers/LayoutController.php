@@ -15,7 +15,7 @@ class LayoutController
     public function callStyle()
     {
         $tabla = 'plantilla';
-        $respuesta = PlantillaModel::mdlEstiloPlantilla($tabla);
+        $respuesta = Plantilla::mdlEstiloPlantilla($tabla);
 
         return $respuesta;
 

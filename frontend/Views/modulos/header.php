@@ -67,7 +67,7 @@
             <!--==== START SECTION LOGOTIPO ====-->
             <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="logotipo">
                 <a href="#">
-                    <img src="http://localhost:8000/backend/Views/img/plantilla/logo.png" alt="" class="img-responsive">
+                    <img src="http://localhost:8000/backend/<?= $social['logo'] ?>" alt="" class="img-responsive">
                 </a>
             </div>
             <!--==== END SECTION LOGOTIPO ====-->
@@ -120,66 +120,30 @@
         <!--==== START SECTION CATEGORIAS ====-->
         <div class="col-xs-12 backColor" id="categorias">
 
-            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                <h4>
-                    <a href="#" class="pixelCategorias">Lorem Ipsum</a>
-                </h4>
+            <?php
+                $categories = ProductoController::getCategories();
+            ?>
 
-                <hr>
-                
-                <ul>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                <h4>
-                    <a href="#" class="pixelCategorias">Lorem Ipsum</a>
-                </h4>
+            <?php foreach ($categories as $category): ?>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                    <h4>
+                        <a href="<?= $category['ruta']?>" class="pixelCategorias"><?= $category['nombre'] ?></a>
+                    </h4>
 
-                <hr>
+                    <hr>
+                    <?php
+                        $subCategories = ProductoController::getSubCategories($category['id']);
+                    ?>
+                    <ul>
+                        <?php foreach ($subCategories as $subCategory): ?>
+                            <li>
+                                <a href="<?= $subCategory['ruta'];?>" class="pixelSubCategorias"><?= $subCategory['nombre'];?></a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
 
-                <ul>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                <h4>
-                    <a href="#" class="pixelCategorias">Lorem Ipsum</a>
-                </h4>
-
-                <hr>
-
-                <ul>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                <h4>
-                    <a href="#" class="pixelCategorias">Lorem Ipsum</a>
-                </h4>
-
-                <hr>
-
-                <ul>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                    <li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-                </ul>
-            </div>
+                </div>
+            <?php endforeach; ?>
 
         </div>
         <!--==== END SECTION CATEGORIAS ====-->

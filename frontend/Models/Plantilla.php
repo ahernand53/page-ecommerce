@@ -2,7 +2,7 @@
 
 require_once 'conexion.php';
 
-class PlantillaModel
+class Plantilla
 {
     static public function mdlEstiloPlantilla($tabla)
     {

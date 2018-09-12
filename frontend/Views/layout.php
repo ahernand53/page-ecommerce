@@ -11,6 +11,16 @@
     
     <title>Proyecto E-Commerce</title>
 
+    <link rel="icon" href="http://localhost:8000/backend/Views/img/plantilla/icono.png">
+
+    <!--=====================================================
+    =       MANTENER LA RUTA FIJA DEL PROYECTO              =
+    ======================================================-->
+
+    <?php
+        $ruta = Ruta::getRuta();
+    ?>
+
     <link rel="stylesheet" href="Views/css/plugins/font-awesome.min.css">
     <link rel="stylesheet" href="Views/css/plugins/bootstrap.min.css">
     <link rel="stylesheet" href="Views/css/cabezote.css">
@@ -26,6 +36,10 @@
     <?php
 
         include 'modulos/header.php';
+
+        if (isset($_GET['ruta'])){
+            echo $_GET['ruta'];
+        }
 
     ?>
 
