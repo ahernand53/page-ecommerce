@@ -18,13 +18,13 @@
     ======================================================-->
 
     <?php
-        $ruta = Ruta::getRuta();
+        $url = Ruta::getRuta();
     ?>
 
-    <link rel="stylesheet" href="Views/css/plugins/font-awesome.min.css">
-    <link rel="stylesheet" href="Views/css/plugins/bootstrap.min.css">
-    <link rel="stylesheet" href="Views/css/cabezote.css">
-    <link rel="stylesheet" href="Views/css/plantilla.css">
+    <link rel="stylesheet" href="<?= $url;?>Views/css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= $url;?>Views/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= $url;?>Views/css/cabezote.css">
+    <link rel="stylesheet" href="<?= $url;?>Views/css/plantilla.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet">
 </head>
 <body>
@@ -37,15 +37,22 @@
 
         include 'modulos/header.php';
 
+        $rutas = array();
+
         if (isset($_GET['ruta'])){
-            echo $_GET['ruta'];
+            $rutas = explode('/', $_GET['ruta']);
+            if($rutas[0] == 'bolsos'){
+                include 'modulos/productos.php';
+            } else {
+                include 'modulos/404.php';
+            }
         }
 
     ?>
 
-    <script src="Views/js/plugins/jquery.min.js"></script>
-    <script src="Views/js/plugins/bootstrap.min.js"></script>
-    <script src="Views/js/cabezote.js"></script>
-    <script src="Views/js/plantilla.js"></script>
+    <script src="<?= $url; ?>Views/js/plugins/jquery.min.js"></script>
+    <script src="<?= $url; ?>Views/js/plugins/bootstrap.min.js"></script>
+    <script src="<?= $url; ?>Views/js/cabezote.js"></script>
+    <script src="<?= $url; ?>Views/js/plantilla.js"></script>
 </body>
 </html>
